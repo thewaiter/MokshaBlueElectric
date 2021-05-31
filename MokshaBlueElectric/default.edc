@@ -10502,7 +10502,9 @@ group { name: "e/modules/clock/digital";
             name: "base";
             description {
                state: "default" 0.0;
-               aspect: 1.0 1.0;
+               rel1.relative: (25/380) (25/380);
+               rel2.relative: (365/380) (365/380);
+               aspect: 1.0 1.0; aspect_preference: BOTH;
                image.normal: "clock_base.png";
             }
          }
@@ -10515,11 +10517,11 @@ group { name: "e/modules/clock/digital";
                visible: 0;
                rel1 {
                   to: "base";
-                  relative: (2.0/128.0) (2.0/128.0);
+                  //~ relative: (2.0/128.0) (2.0/128.0);
                }
                rel2 {
                   to: "base";
-                  relative: (1.0+(2.0/128.0)) (1.0+(2.0/128.0));
+                  //~ relative: (1.0+(2.0/128.0)) (1.0+(2.0/128.0));
                }
             }
          }
