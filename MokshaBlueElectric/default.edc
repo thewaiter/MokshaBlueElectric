@@ -52,9 +52,9 @@ data {
 	item: "theme/version"	"0.1.0";
 	item: "theme/author"	"Bodhi Team";
 	item: "theme/license"	"BSD Artistic License";
-	item: "gtk-theme"       "MokshaBlueElectric-GTK";
-	item: "icon-theme"      "MokshaBlueElectric-Icons";
-	item: "version"         "110";
+	item: "gtk-theme"     "A-Electric-Blue GTK";
+	item: "icon-theme"    "Icons-Moksha-BlueElectric";
+	item: "version"       "110";
 }
 
 externals.external: "elm";
