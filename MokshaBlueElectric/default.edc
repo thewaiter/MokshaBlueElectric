@@ -10791,7 +10791,7 @@ group { name: "e/modules/clock/digital";
             }
             description { state: "today" 0.0;
                inherit: "default" 0.0;
-               color: 0 0 0 200;
+               color: 255 0 0 200;
             }
          }
          program { name: "date_clicked";
@@ -12806,6 +12806,10 @@ group { name: "e/modules/clock/digital";
 
 /////////////////////////////////////////////////////////////////////////////
 /*** MOD: SYSTRAY ***/
+   #define FIXED_SIZE(_WIDTH, _HEIGHT) \
+   min: _WIDTH _HEIGHT; max: _WIDTH _HEIGHT; fixed: 1 1;
+   images.image: "systray_expand.png" COMP;
+   images.image: "systray_expand_vert.png" COMP;
 
   group { name: "e/modules/systray/main";
    alias: "e/modules/systray/main/default";
@@ -12825,6 +12829,24 @@ group { name: "e/modules/clock/digital";
                state: "disabled" 0.0;
                inherit: "default" 0.0;
                color: 255 0 0 128;
+            }
+         }
+         part { 
+            name: "expand_butt";
+            scale: 1;
+            description { state: "default" 0.0;
+               rel1.relative: 1.0 0.0;
+               rel1.offset: -25 0;
+               FIXED_SIZE(15, 15)
+               image.normal: "systray_expand.png";
+               fill.smooth: 1;
+            }
+            description { state: "vertical" 0.0;
+               rel1.relative: 0.0 1.0;
+               rel1.offset: 0 -25;
+               FIXED_SIZE(15, 15)
+               image.normal: "systray_expand_vert.png";
+               fill.smooth: 1;
             }
          }
          part {
@@ -12871,83 +12893,97 @@ group { name: "e/modules/clock/digital";
                }
             }
          }
-        programs {
+programs {
       program {
          signal: "e,action,orient,horiz"; source: "e";
          action: STATE_SET "default" 0.0;
          target: "e.box";
+         target: "expand_butt";
       }
       program {
          signal: "e,action,orient,vert"; source: "e";
          action: STATE_SET "vertical" 0.0;
          target: "e.box";
          target: "e.size";
+         target: "expand_butt";
       }
       program {
          signal: "e,action,orient,left"; source: "e";
          action: STATE_SET "vertical" 0.0;
          target: "e.box";
          target: "e.size";
+         target: "expand_butt";
       }
       program {
          signal: "e,action,orient,right"; source: "e";
          action: STATE_SET "vertical" 0.0;
          target: "e.box";
          target: "e.size";
+         target: "expand_butt";
       }
       program {
          signal: "e,action,orient,top"; source: "e";
          action: STATE_SET "default" 0.0;
          target: "e.box";
+         target: "expand_butt";
       }
       program {
          signal: "e,action,orient,bottom"; source: "e";
          action: STATE_SET "default" 0.0;
          target: "e.box";
+         target: "expand_butt";
       }
       program {
          signal: "e,action,orient,corner_tl"; source: "e";
          action: STATE_SET "default" 0.0;
          target: "e.box";
+         target: "expand_butt";
       }
       program {
          signal: "e,action,orient,corner_tr"; source: "e";
          action: STATE_SET "default" 0.0;
          target: "e.box";
+         target: "expand_butt";
       }
       program {
          signal: "e,action,orient,corner_bl"; source: "e";
          action: STATE_SET "default" 0.0;
          target: "e.box";
+         target: "expand_butt";
       }
       program {
          signal: "e,action,orient,corner_br"; source: "e";
          action: STATE_SET "default" 0.0;
          target: "e.box";
+         target: "expand_butt";
       }
       program {
          signal: "e,action,orient,corner_lt"; source: "e";
          action: STATE_SET "vertical" 0.0;
          target: "e.box";
          target: "e.size";
+         target: "expand_butt";
       }
       program {
          signal: "e,action,orient,corner_rt"; source: "e";
          action: STATE_SET "vertical" 0.0;
          target: "e.box";
          target: "e.size";
+         target: "expand_butt";
       }
       program {
          signal: "e,action,orient,corner_lb"; source: "e";
          action: STATE_SET "vertical" 0.0;
          target: "e.box";
          target: "e.size";
+         target: "expand_butt";
       }
       program {
          signal: "e,action,orient,corner_rb"; source: "e";
          action: STATE_SET "vertical" 0.0;
          target: "e.box";
          target: "e.size";
+         target: "expand_butt";
       }
    }
 }
