@@ -39074,7 +39074,7 @@ target: "region";
                   min: 0 1;
                   text_class: "module_small";
                }
-	    }
+          }
             description { state: "visible" 0.0;
                inherit: "default" 0.0;
                color: 255 255 255 255;
@@ -39111,6 +39111,7 @@ target: "region";
       parts {
          part { name: "e.text.label"; type: TEXT;
             effect: SOFT_SHADOW;
+            scale: 1;
             mouse_events: 0;
             description { state: "default" 0.0;
                rel1 {
@@ -39123,11 +39124,11 @@ target: "region";
                color3: 0 0 0 24;
                text {
                   font: "Sans";
-                  size: 9;
+                  size: 10;
                   min: 0 1;
                   text_class: "module_small";
                }
-	    }
+            }
          }
          part { name: "event"; type: RECT;
             mouse_events: 1;
