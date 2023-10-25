@@ -10794,10 +10794,6 @@ group { name: "e/modules/clock/digital";
                color: 255 0 0 200;
             }
          }
-         program { name: "date_clicked";
-            signal: "mouse,clicked,1*"; source: "day";
-            action: SIGNAL_EMIT "e,action,date,get" "";
-         } 
          part { name: "e.text.label";
             type: TEXT;
             mouse_events: 0;
@@ -27077,6 +27073,7 @@ target: "region";
                   size: 16;
                   align: 0.0 0.5;
                   min: 1 1;
+                  ellipsis: -1;
                   text_class: "desklock_passwd";
                }
             }
