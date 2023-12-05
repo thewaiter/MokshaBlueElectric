@@ -22729,6 +22729,21 @@ target: "region";
                image.normal: "check_base.png";
             }
          }
+         part { name: "focus";
+            description { state: "default" 0.0;
+               rel1.offset: -2 -2;
+               rel2.offset:  0  0;
+               color: 255 255 255 128;
+               image.normal: "check_base.png";
+               image.border: 9 9 9 9;
+               visible: 0;
+               offscale;
+          }
+          description { state: "focused" 0.0;
+               inherit: "default" 0.0;
+               visible: 1;
+           }
+         }
          part {
             name: "mark";
             mouse_events: 0;
@@ -22865,6 +22880,18 @@ target: "region";
             target: "mark";
             target: "event";
             target: "e.text.label";
+         }
+         program {
+            name: "focus_in";
+            signal: "e,state,focused"; source: "e";
+            action: STATE_SET "focused" 0.0;
+            target: "focus";
+         }
+         program {
+            name: "focus_out";
+            signal: "e,state,unfocused"; source: "e";
+            action: STATE_SET "default" 0.0;
+            target: "focus";
          }
       }
    }
@@ -23126,6 +23153,21 @@ target: "region";
                image.normal: "radio_base.png";
             }
          }
+         part { name: "focus";
+            description { state: "default" 0.0;
+               rel1.offset: -2 -2;
+               rel2.offset:  0  0;
+               color: 255 255 255 128;
+               image.normal: "check_base.png";
+               image.border: 9 9 9 9;
+               visible: 0;
+               offscale;
+          }
+          description { state: "focused" 0.0;
+               inherit: "default" 0.0;
+               visible: 1;
+           }
+         }
          part {
             name: "mark";
             mouse_events: 0;
@@ -23263,6 +23305,18 @@ target: "region";
             target: "event";
             target: "e.text.label";
          }
+         program {
+            name: "focus_in";
+            signal: "e,state,focused"; source: "e";
+            action: STATE_SET "focused" 0.0;
+            target: "focus";
+         }
+         program {
+            name: "focus_out";
+            signal: "e,state,unfocused"; source: "e";
+            action: STATE_SET "default" 0.0;
+            target: "focus";
+         }
       }
    }
    group {
@@ -23293,6 +23347,21 @@ target: "region";
                }
                image.normal: "radio_base.png";
             }
+         }
+         part { name: "focus";
+            description { state: "default" 0.0;
+               rel1.offset: -2 -2;
+               rel2.offset:  0  0;
+               color: 255 255 255 128;
+               image.normal: "check_base.png";
+               image.border: 9 9 9 9;
+               visible: 0;
+               offscale;
+          }
+          description { state: "focused" 0.0;
+               inherit: "default" 0.0;
+               visible: 1;
+           }
          }
          part {
             name: "mark";
@@ -23490,6 +23559,18 @@ target: "region";
             target: "event";
             target: "e.text.label";
          }
+         program {
+            name: "focus_in";
+            signal: "e,state,focused"; source: "e";
+            action: STATE_SET "focused" 0.0;
+            target: "focus";
+         }
+         program {
+            name: "focus_out";
+            signal: "e,state,unfocused"; source: "e";
+            action: STATE_SET "default" 0.0;
+            target: "focus";
+         }
       }
    }
    group {
@@ -23519,6 +23600,11 @@ target: "region";
                state: "clicked" 0.0;
                inherit: "default" 0.0;
                image.normal: "bt_base1.png";
+            }
+            description {
+               state: "focused" 0.0;
+               inherit: "default" 0.0;
+               color: 255 255 255 128;
             }
             description {
                state: "disabled" 0.0;
@@ -23765,6 +23851,18 @@ target: "region";
             target: "e.text.label";
             target: "disabler";
          }
+         program {
+            name: "focus_in";
+            signal: "e,state,focused"; source: "e";
+            action: STATE_SET "focused" 0.0;
+            target: "button_image";
+         }
+         program {
+            name: "focus_out";
+            signal: "e,state,unfocused"; source: "e";
+            action: STATE_SET "default" 0.0;
+            target: "button_image";
+         } 
       }
    }
    /* e/widgets/scrollframe is used in the Wallpaper selector dialog */
@@ -26117,6 +26215,21 @@ target: "region";
                }
             }
          }
+         part { name: "focus";
+            description { state: "default" 0.0;
+               rel1.offset: -2 -2;
+               rel2.offset:  0  0;
+               color: 255 255 255 128;
+               image.normal: "check_base.png";
+               image.border: 9 9 9 9;
+               visible: 0;
+               offscale;
+          }
+          description { state: "focused" 0.0;
+               inherit: "default" 0.0;
+               visible: 1;
+           }
+         }
          part {
             name: "runner";
             mouse_events: 0;
@@ -26388,6 +26501,18 @@ target: "region";
             target: "clip";
             target: "event";
          }
+         program {
+            name: "focus_in";
+            signal: "e,state,focused"; source: "e";
+            action: STATE_SET "focused" 0.0;
+            target: "focus";
+         }
+         program {
+            name: "focus_out";
+            signal: "e,state,unfocused"; source: "e";
+            action: STATE_SET "default" 0.0;
+            target: "focus";
+         }
       }
    }
    group {
@@ -26419,6 +26544,21 @@ target: "region";
                   offset: -1   -3;
                }
             }
+         }
+         part { name: "focus";
+            description { state: "default" 0.0;
+               rel1.offset: -2 -2;
+               rel2.offset:  0  0;
+               color: 255 255 255 128;
+               image.normal: "check_base.png";
+               image.border: 9 9 9 9;
+               visible: 0;
+               offscale;
+          }
+          description { state: "focused" 0.0;
+               inherit: "default" 0.0;
+               visible: 1;
+           }
          }
          part {
             name: "runner";
@@ -26691,6 +26831,18 @@ target: "region";
             action: STATE_SET "default" 0.0;
             target: "clip";
             target: "event";
+         }
+         program {
+            name: "focus_in";
+            signal: "e,state,focused"; source: "e";
+            action: STATE_SET "focused" 0.0;
+            target: "focus";
+         }
+         program {
+            name: "focus_out";
+            signal: "e,state,unfocused"; source: "e";
+            action: STATE_SET "default" 0.0;
+            target: "focus";
          }
       }
    }
