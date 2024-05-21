@@ -35,12 +35,12 @@ group { name: "e/shelf/default/base";
          description { state: "default" 0.0;
             image.normal: "vgrad_med.png";
             fill.smooth: 0;
-            TILED_HORIZ(120)
+            //~ TILED_HORIZ(120)
          }
          description { state: "vert" 0.0;
             image.normal: "vgrad_tall.png";
             fill.smooth: 0;
-            TILED_HORIZ(40)
+            //~ TILED_HORIZ(40)
          }
       }
       part { name: "bevel"; mouse_events: 0;
