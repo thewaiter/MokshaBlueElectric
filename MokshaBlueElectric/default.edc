@@ -355,6 +355,7 @@ collections {
 #include "widgets/tooltip.edc"
 #include "widgets/video.edc"
 #include "widgets/win.edc"
+#include "widgets/engage.edc"
 
 
 /////////////////////////////////////////////////////////////////////////////
