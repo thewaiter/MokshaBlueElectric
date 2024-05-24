@@ -25652,12 +25652,12 @@ target: "region";
                aspect: 1.0 1.0;
                aspect_preference: VERTICAL;
                rel1 {
-                  relative: 0.0  0.0;
-                  offset: 4    4;
+                  relative: 0.2  0.2;
+                  //~ offset: 7  7;
                }
                rel2 {
-                  relative: 0.0  1.0;
-                  offset: 4   -5;
+                  relative: 1.0  0.8;
+                  //~ offset: 4   -5;
                }
                image.normal: "icon_active.png";
             }
