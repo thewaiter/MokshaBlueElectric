@@ -31637,7 +31637,7 @@ target: "region";
                rel2 {
                   to: "bot2";
                   relative: 1.0 1.0;
-                  offset: -3 -11;
+                  offset: -3 -20;
                }
                color: 255 255 255 255;
                color3: 0 0 0 32;
@@ -31645,6 +31645,7 @@ target: "region";
                   font: "Sans:style=Bold";
                   size: 10;
                   min: 1 1;
+                  ellipsis: -1;
                   align: 0.5 1.0;
                }
             }
@@ -31659,7 +31660,7 @@ target: "region";
                rel1 {
                   to_y: "bot2";
                   relative: 1.0 0.0;
-                  offset: -5   1;
+                  offset: -5  1;
                }
                rel2 {
                   to_y: "bot2";
@@ -32041,12 +32042,21 @@ target: "region";
             signal: "mouse,down,1";
             source: "ain";
             action: SIGNAL_EMIT "e,action,panel,hide" "e";
+            after: "in_nodelay";
+         }
+         program {
+            name: "in_nodelay";
+            source: "e";
+            action: STATE_SET "default" 0.0;
+            target: "aout";
+            after: "in2";
          }
          program {
             name: "in";
             signal: "e,action,panel,hide";
             source: "e";
             action: STATE_SET "default" 0.0;
+            transition: LINEAR 0.8;
             target: "aout";
             after: "in2";
          }
