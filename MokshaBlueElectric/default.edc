@@ -31524,7 +31524,6 @@ target: "region";
          image: "dia_grad.png" COMP;
          image: "dia_topshad.png" COMP;
          image: "dia_botshad.png" COMP;
-         image: "dia_botshad.png" COMP;
          image: "topsh.png" COMP;
          image: "wp-bot1.png" COMP;
          image: "wp-bot2.png" COMP;
@@ -31747,13 +31746,13 @@ target: "region";
                   to_x: "e.swallow.extras";
                   to_y: "e.swallow.extras";
                   relative: 0.0 0.0;
-                  offset: -4 -7;
+                  offset: 0 -7;
                }
                rel2 {
                   to_x: "e.swallow.extras";
                   to_y: "e.swallow.extras";
                   relative: 1.0 1.0;
-                  offset: -10 3;
+                  offset: 17 3;
                }
                image {
                   normal: "wp-tb2.png";
