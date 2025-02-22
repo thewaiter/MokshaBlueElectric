@@ -52,7 +52,7 @@ data {
 	item: "theme/version"	"0.1.0";
 	item: "theme/author"	"Bodhi Team";
 	item: "theme/license"	"BSD Artistic License";
-	item: "gtk-theme"       "A-Electric-Blue GTK";
+	item: "gtk-theme"       "MokshaBlueElectric";
 	item: "icon-theme"      "MokshaBlueElectric";
 	item: "version"         "110";
 }
